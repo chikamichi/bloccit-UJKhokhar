@@ -13,6 +13,7 @@ end
 # Use sqlite3 for development
 group :development do
   gem 'sqlite3'
+  gem "rails-erd"
 end
 
 # Use SCSS for stylesheets
