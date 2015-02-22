@@ -1,5 +1,19 @@
  require 'faker'
+
  
+if Post.exists?(title: "Test") == false
+Post.create!(
+    title: "Test",
+    body: "Derp body derp"
+  )
+end
+
+if Comment.exists?(body: "comments test") == false
+  Comment.create!(
+    body: "test comment"
+  )
+end
+
  # Create Posts
  50.times do
    Post.create!(
