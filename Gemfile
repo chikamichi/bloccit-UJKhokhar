@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#User Authentication with devise
+gem 'devise'
+
 gem 'faker'
 
 gem 'bootstrap-sass'
