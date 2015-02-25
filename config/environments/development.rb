@@ -1,5 +1,8 @@
 Bloccit::Application.configure do
 
+  # Override Action Mailer's 'silent errors' in development
+  config.action_mailer.raise_delivery_errors = true
+  
   #Devise and ActionMailer
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp

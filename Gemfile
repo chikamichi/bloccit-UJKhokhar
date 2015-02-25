@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#Figaro for sensitive information
+gem 'figaro', '1.0'
+
 #User Authentication with devise
 gem 'devise'
 
