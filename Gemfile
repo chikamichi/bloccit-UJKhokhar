@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#Pundit for authorization
+gem 'pundit'
+
 #Figaro for sensitive information
 gem 'figaro', '1.0'
 
