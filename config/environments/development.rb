@@ -1,14 +1,5 @@
 Bloccit::Application.configure do
-
-  # Override Action Mailer's 'silent errors' in development
-  config.action_mailer.raise_delivery_errors = true
   
-  #Devise and ActionMailer
-  config.action_mailer.default_url_options = { host: 'localhost:3000' }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
-
-
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -36,4 +27,10 @@ Bloccit::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  #Devise and ActionMailer
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+
 end
