@@ -29,7 +29,7 @@ class ApplicationPolicy
   end
 
   def create?
-    user.present?
+    user_exists?
   end
 
   def new?
@@ -57,6 +57,11 @@ class ApplicationPolicy
   # Checks whether the record exists.
   def record_exists?
     scope.where(:id => record.id).exists?
+  end
+
+  # Checks whether the user is available.
+  def user_exists?
+    user.present?
   end
 end
 
