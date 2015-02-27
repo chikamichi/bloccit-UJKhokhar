@@ -77,7 +77,7 @@ class ApplicationPolicy
   #
   # The user *must* have a role from the provided whitelist.
   def user_is?(*roles)
-    user.present? && roles.any? { |role| user.send(:"#{role}?") }
+    user_exists? && roles.any? { |role| user.send(:"#{role}?") }
   end
 end
 
