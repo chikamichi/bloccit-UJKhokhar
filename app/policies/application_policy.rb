@@ -25,7 +25,7 @@ class ApplicationPolicy
   end
 
   def show?
-    scope.where(:id => record.id).exists?
+    record_exists?
   end
 
   def create?
@@ -50,6 +50,13 @@ class ApplicationPolicy
 
   def scope
     record.class
+  end
+
+  # --------------------------- Utility methods --------------------------------
+
+  # Checks whether the record exists.
+  def record_exists?
+    scope.where(:id => record.id).exists?
   end
 end
 
