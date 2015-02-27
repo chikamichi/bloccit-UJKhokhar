@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    authorize @post
   end
 
   def new
@@ -15,6 +16,7 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.build(params.require(:post).permit(:title, :body))
+    authorize @post
 
     if @post.save
       flash[:notice] = "Post was saved."
@@ -32,6 +34,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
+    authorize @post
 
     if @post.update_attributes(params.require(:post).permit(:title, :body))
       flash[:notice] = "Post was updated."
