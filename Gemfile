@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#Redcarpet for Post Markdown
+gem 'redcarpet'
+
 #Pundit for authorization
 gem 'pundit'
 

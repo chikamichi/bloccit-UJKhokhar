@@ -18,7 +18,7 @@ class PostsController < ApplicationController
 
     if @post.save
       flash[:notice] = "Post was saved."
-      redirect_to @post
+      redirect_to [@topic, @post]
     else
       flash[:error] = "There was an error saving the post. Please try again."
       render :new
@@ -38,7 +38,7 @@ class PostsController < ApplicationController
 
     if @post.update_attributes(post_params)
       flash[:notice] = "Post was updated."
-      redirect_to @post
+      redirect_to [@topic, @post]
     else
       flash[:error] = "There was an error saving the post. Please try again."
     end
