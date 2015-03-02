@@ -17,4 +17,5 @@ class User < ActiveRecord::Base
   def regular?
     role == 'regular'
   end
+
 end
