@@ -1,5 +1,14 @@
 source 'https://rubygems.org'
 
+#Fog for cloud services
+gem 'fog'
+
+#Carrierwave for image upload
+gem 'carrierwave'
+
+#Minimagick is a ruby wrapper for imagemagick
+gem 'mini_magick'
+
 #Redcarpet for Post Markdown
 gem 'redcarpet'
 
