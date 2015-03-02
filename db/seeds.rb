@@ -1,5 +1,7 @@
  require 'faker'
  
+
+
 # Create Users
 5.times do
   user = User.new(
@@ -36,6 +38,15 @@ topics = Topic.all
 end
 posts = Post.all
  
+# Create Summaries
+5.times do
+  Summary.create!(
+    description: Faker::Lorem.paragraph,
+    post: posts.sample
+)
+end
+summaries = Summary.all
+
 # Create Comments
 100.times do
   Comment.create!(
