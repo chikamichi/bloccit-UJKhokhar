@@ -21,4 +21,9 @@ class PostPolicy < ApplicationPolicy
   def show?
     super && (record_owned_by_user? || user_is?('moderator', 'admin'))
   end
+
+  def destroy?
+    # Can I use this: super || user_is?('moderator')
+    user_exists? && (record_owned_by_user? || user_is?('admin', 'moderator'))
+  end
 end

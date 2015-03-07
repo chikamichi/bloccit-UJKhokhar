@@ -1,1 +1,14 @@
-<%= comment.body %> <small><em><%= comment.user.name %></em></small><br/>
+<div class="media">
+  <%= link_to '#', class: 'pull-left' do %>
+    <%= image_tag(comment.user.avatar.small.url) if comment.user.avatar? %>
+  <% end %>
+  <div class="media-body">
+    <small>
+      <%= comment.user.name %> commented <%= time_ago_in_words(comment.created_at) %> ago
+      <% if policy(comment).destroy? %>
+        | <%= link_to "Delete", [@topic, @post, comment], method: :delete, data: { confirm: 'Are you sure you want to delete your comment?' } %>
+      <% end %>
+    </small>
+    <p> <%= comment.body %> </p>
+  </div>
+</div>
