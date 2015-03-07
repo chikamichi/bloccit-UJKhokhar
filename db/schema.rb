@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20150306064556) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.integer  "topic_id"
-    t.string   "image"
   end
 
   add_index "posts", ["topic_id"], name: "index_posts_on_topic_id"
