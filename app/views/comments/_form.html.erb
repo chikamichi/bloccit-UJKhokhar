@@ -1,4 +1,4 @@
-<%= form_for [topic,post, post.comments.new] do |f| %>
+<%= form_for [post, post.comments.new] do |f| %>
   <%= f.label :comment %>
   <%= f.text_area :body, class: 'form-control', placeholder: "Enter comment." %>
   <div class="form-group">
