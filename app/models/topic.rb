@@ -1,5 +1,5 @@
 class Topic < ActiveRecord::Base
-  include Paginate
+  include Pagination
 
   has_many :posts, dependent: :destroy
 end

@@ -1,6 +1,4 @@
-require 'active_support/concern'
-
-module Paginate
+module Pagination
   extend ActiveSupport::Concern
 
   included do
