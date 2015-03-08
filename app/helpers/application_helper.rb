@@ -34,7 +34,7 @@ module ApplicationHelper
     # If this is not the first page being displayed, add a link to the previous
     # page.
     if current_page > 0
-      html << content_tag(:span, link_to("<- Previous", topics_path(page: current_page - 1)))
+      html << content_tag(:span, link_to("<- Previous", page: current_page - 1))
     end
 
     # Display a direct link for each page (but the current one).
@@ -42,14 +42,14 @@ module ApplicationHelper
       if page == current_page
         html << content_tag(:span, page, class: 'current')
       else
-        html << content_tag(:span, link_to(page, topics_path(page: page)))
+        html << content_tag(:span, link_to(page, page: page))
       end
     end
 
     # If this is not the last page being displayed, add a link to the next
     # page.
     if current_page < total_pages - 1
-      html << content_tag(:span, link_to("Next ->", topics_path(page: current_page + 1)))
+      html << content_tag(:span, link_to("Next ->", {page: current_page + 1}))
     end
 
     content_tag(:div, class: 'pagination') do
