@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+# rspec for testing
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+end
+
 #will_paginate for pagination
 gem 'will_paginate', '~> 3.0.5'
 
