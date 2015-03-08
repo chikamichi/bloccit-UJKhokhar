@@ -22,3 +22,30 @@
 .nav {
   margin-top: 5px;
 }
+
+.pagination {
+  border: 1px solid white;
+}
+
+.pagination > span {
+  display: inline-block;
+  border-left: 1px solid white;
+}
+
+.pagination > span > a,
+.pagination > span.current {
+  padding: 0 10px;
+}
+
+.pagination > span > a:hover {
+  text-decoration: none;
+}
+
+.pagination > span:first-child {
+  border: none;
+}
+
+.pagination > span:not(.current):hover {
+  background: white;
+  color: black;
+}
