@@ -12,6 +12,8 @@
  *= require_tree .
  */
 
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
 
@@ -21,4 +23,9 @@
 
 .nav {
   margin-top: 5px;
+}
+
+.vote-arrows {
+  width: 40px;
+  text-align: center;
 }

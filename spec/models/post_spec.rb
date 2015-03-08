@@ -4,9 +4,9 @@ describe Post do
   describe "vote methods" do
 
     before do
-      @post = Post.create(title: 'post tile', body: 'post body')
-      3.times { @post.votes.create(value: 1)}
-      2.times { @post.votes.create(value: -1)}
+      @post = Post.create(title: 'post title', body: 'post bodies must be pretty long.')
+      3.times { @post.votes.create(value: 1) }
+      2.times { @post.votes.create(value: -1) }
     end
 
     describe '#up_votes' do
@@ -26,8 +26,6 @@ describe Post do
         expect( @post.points ).to eq(1)  
       end
     end
-
-    
 
   end       
 end
