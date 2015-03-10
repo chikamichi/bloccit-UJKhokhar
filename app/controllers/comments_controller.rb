@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
       redirect_to [@topic, @post]
     else
       flash[:error] = "There was an error saving the comment. Please try again."
-      render "posts/show"
+      redirect_to :back
     end
   end
 
