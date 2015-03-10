@@ -22,4 +22,8 @@ class User < ActiveRecord::Base
   def regular?
     role == 'regular'
   end
+
+  def favorited(post)
+    favorites.where(post_id: post.id).first
+  end
 end
