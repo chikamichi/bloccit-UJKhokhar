@@ -56,6 +56,15 @@ admin = User.new(
   password: 'helloworld',
   role: 'admin'
 )
+
+#create your user
+admin = User.new(
+  name: 'Umar',
+  email: 'ujkhokhar@gmail.com',
+  password: 'helloworld',
+  role: 'admin'
+)
+
 admin.skip_confirmation!
 admin.save!
 
