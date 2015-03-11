@@ -17,6 +17,10 @@
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
 
+.voted {
+  opacity: 0.5;
+}
+
 .favorite {
   margin-top: 20px;
 }
