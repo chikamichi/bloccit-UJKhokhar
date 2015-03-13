@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
+  gem 'pry-rails'
 end
 
 #will_paginate for pagination
