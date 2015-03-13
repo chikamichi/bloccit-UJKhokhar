@@ -20,3 +20,6 @@
 
 # Carrierwave image
 public/uploads
+
+# rbenv
+.ruby-version
