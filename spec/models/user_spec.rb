@@ -2,11 +2,9 @@ require 'rails_helper'
 
 describe User do
 
-  include TestFactories
-
   before do
-    @post = associated_post
-    @user = authenticated_user 
+    @post = create(:post)
+    @user = create(:user)
   end
 
   describe "#favorited(post)" do

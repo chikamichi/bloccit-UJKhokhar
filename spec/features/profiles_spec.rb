@@ -5,12 +5,10 @@ Warden.test_mode!
 
 describe "Visiting profiles" do
 
-  include TestFactories
-
   before do
-    @user = authenticated_user
-    @post = associated_post(user: @user)
-    @comment = comment_without_email
+    @user = create(:user)
+    @post = create(:post, user: @user)
+    @comment = create(:comment)
   end
 
   describe "not signed in" do
