@@ -1,17 +1,14 @@
 require 'rails_helper'
 
-include TestFactories
 include Devise::TestHelpers
 
 describe VotesController do
-  
-  include TestFactories
 
   describe '#up_vote' do
     it "adds an up-vote to the post" do
       request.env["HTTP_REFERER"] = '/'
-      @user = authenticated_user
-      @post = associated_post
+      @user = create(:user)
+      @post = create(:post)
       sign_in @user
 
       expect {
