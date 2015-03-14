@@ -5,6 +5,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
   gem 'pry-rails'
+  gem 'database_cleaner'
 end
 
 #will_paginate for pagination
