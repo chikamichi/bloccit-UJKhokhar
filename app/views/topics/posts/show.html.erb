@@ -10,12 +10,16 @@
     <p><%= markdown_to_html @post.body %></p>
 
     <% if @comments %>
-      <h3>Comments</h3>
-      <%= render partial: 'comments/comment', collection: @comments %>
+      <h2>Comments</h2>
+      <div class='js-comments'>
+        <%= render partial: 'comments/comment', collection: @comments %>
+      </div>
     <% end %>
 
-    <%if policy(@comments).create? %>
-      <%= render partial: 'comments/form', locals: { post: @post } %>
+    <% if policy(@comments).create? %>
+      <div class='new-comment'>
+        <%= render partial: 'comments/form', locals: { post: @post } %>
+      </div>
     <% end %>
 
   </div>
