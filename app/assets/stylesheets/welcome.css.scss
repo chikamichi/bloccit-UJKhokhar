@@ -2,22 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-//Own Styles
-$font-stack: 'Source Sans Pro', san-serif;
-$headline-color: #1abc9c;
-
-body {
-  font-family: $font-stack;
-  background-color: #ecf0f1;
-  font-size: 1.75em;
-}
-
-.nav a {
-  color: #34495e;
-  font-size: 1.15em;
-}
-
-//END OWN STYLES
 
 h1 {
   color: $headline-color;

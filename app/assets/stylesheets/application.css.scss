@@ -15,7 +15,25 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
+
+
+// Own Styles
+$font-stack: 'Source Sans Pro', san-serif;
+$headline-color: #1abc9c;
+
+body {
+  font-family: $font-stack;
+  background-color: #ecf0f1;
+  font-size: 1.75em;
+}
+
+.nav a {
+  color: #34495e;
+  font-size: 1.15em;
+}
+
+//END OWN STYLES
 
 .voted {
   opacity: 0.5;
